@@ -1,8 +1,22 @@
-/* WORK SANS FONT */
+/* SHARED STYLE */
 body{
     font-family: 'Work Sans', sans-serif;
 }
-
+.btn-primary{
+    color: #FFF;
+    font-size: 1.25rem;
+    font-weight: 600;
+    border-radius: 8px;
+    background: #FF900E;
+    padding: 20px 25px;
+    cursor: pointer;
+    border: none;
+    
+}
+/* BLUR */
+.img-blur{
+    filter: blur(10px);
+}
 /* HEADER */
 
 header{
@@ -12,13 +26,19 @@ header{
 nav{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+.nav-title{
+    color: var(--Dark-01, #131313);
+    font-size: 2.8rem;
+    font-weight: 700;
 }
 nav > ul{
     display: flex;
 }
 nav li{
     list-style: none;
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: 500;
     margin-right: 30px;
    
@@ -26,4 +46,40 @@ nav li{
 nav li a{
     color: var(--Dark-02, #424242);
     text-decoration: none;
+}
+/* BANNER SECTION */
+.banner-content{
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+}
+.banner-title{
+    font-size: 4rem;
+    font-weight: 700;
+    color: #131313;
+}
+.banner-description{
+    color: #727272;
+}
+.banner img{
+    width: 100%;
+}
+/* RESPONSIVR */
+/* MOBILE DEVICES */
+@media screen and (max-width:576px) {
+    header{
+        padding: 20px;
+    }
+    nav{
+        flex-direction: column;
+    }
+}
+/* MEDIUM DEVICES */
+@media screen and (min-width:576px) and (max-width:960px) {
+    nav{
+        flex-direction: column;
+    }
+    header{
+        padding: 50px;
+    }
 }
